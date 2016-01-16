@@ -22,6 +22,13 @@ Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'a.vim'
+Bundle 'Lokaltog/vim-powerline'
+
+"------------vim-powerline-------------
+"--状态行设置--
+set laststatus=2 " 总显示最后一个窗口的状态行；设为1则窗口数多于一个的时候显示最后一个窗口的状态行；0不显示最后一个窗口的状态行
+set t_Co=256
+let g:Powerline_symbols = 'unicode'
 
 "-----------------a.vim----------------------
 nnoremap <silent> <F9> :A<CR>
@@ -96,7 +103,7 @@ if has("syntax")
   syntax on            " 语法高亮
 endif
 colorscheme torte        " elflord ron peachpuff default 设置配色方案，vim自带的配色方案保存在/usr/share/vim/vim72/colors目录下
-set guifont=文泉驿等宽微米黑\ 11  "字体设置
+set guifont=Monaco\ 11  "字体设置
 
 " detect file type
 filetype on
@@ -144,8 +151,6 @@ set number            " Enable line number    "显示行号
 "set previewwindow    " 标识预览窗口
 set history=50        " set command history to 50    "历史记录50条
 
-"--状态行设置--
-set laststatus=2 " 总显示最后一个窗口的状态行；设为1则窗口数多于一个的时候显示最后一个窗口的状态行；0不显示最后一个窗口的状态行
 set ruler            " 标尺，用于显示光标位置的行号和列号，逗号分隔。每个窗口都有自己的标尺。如果窗口有状态行，标尺在那里显示。否则，它显示在屏幕的最后一行上。
 
 "--命令行设置--
