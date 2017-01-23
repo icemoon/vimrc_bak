@@ -17,12 +17,22 @@ Bundle 'The-NERD-tree'
 Bundle 'STL-improved'
 Bundle 'bufexplorer.zip'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'rdnetto/YCM-Generator'
 Bundle 'scrooloose/syntastic'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'a.vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'plasticboy/vim-markdown'
+"Bundle 'suan/vim-instant-markdown' 
+Bundle 'iamcco/mathjax-support-for-mkdp'
+Bundle 'iamcco/markdown-preview.vim'
+
+"-----------------markdown-preview-----------
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_open = 1
+"let g:mkdp_auto_close = 1
 
 "------------vim-powerline-------------
 "--状态行设置--
@@ -72,7 +82,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif	"离开插入模式后�
 let g:ycm_min_num_of_chars_for_completion=2
 nnoremap <leader>f :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>g :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>fg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>e :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_collect_identifiers_from_tags_files = 1
 nmap <F3> :YcmDiags<CR>
 let g:ycm_error_symbol = '>$'
@@ -279,3 +289,7 @@ function! ToggleFullScreen()
     call system("wmctrl -r :ACTIVE: -b toggle,fullscreen")
 endfunction
 map <silent> <F11> :call ToggleFullScreen()<CR>
+
+" set tab to 4 spaces
+set ts=4
+set expandtab
